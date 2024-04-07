@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Browser is Integral to Web App UX - mleonhard's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<h1>The Browser is Integral to Web App UX</h1>
+<p>mleonhard, 2024-04-06.
+<section>
+    <p>The browser is an integral part of any web app experience.
+    <p><img src="browser.screenshot.png" alt="Screenshot of a web browser window showing a webpage">
+    <p>Webapp makers can provide better user-experience when they
+        carefully consider web app behavior when the user invokes various browser functions:
+
+    <ul>
+        <li>User opens a saved URL (browser bookmark, link in an email or slack, etc.)
+            <ul>
+                <li>Does the app show the same content that was visible when they saved the URL?
+                <li>What happens when a user opens a URL that was saved by another user?
+                <li>When the user must click a button to show subordinate content,
+                    like a popup or an expanded view,
+                    will they also have a way to get a link to that content?
+                <li>Is the URL format human-readable (<code>/invoice-1234</code>) or inscrutable
+                    (<code>/40104-17110@8932#191977</code>)?
+                <li>Is the URL short or long? Will it get cut into multiple lines when pasted into an email?
+                <li>Can one easily tell the URL to someone verbally, or does it contain symbols that are hard to say
+                    (like <code>^\_`&lt;&gt;|{}</code>) or mixed upper-case and lower-case letters?
+            </ul>
+        <li>User clicks the browser's Back or Forward buttons
+            <ul>
+                <li>Will this navigate between breadcrumb items, between "screens"?
+                <li>Will it open or close subordinate content?
+                <li>Will it undo or re-do changes to input widgets?
+            </ul>
+        <li>User presses the browser's Refresh button
+            <ul>
+                <li>Does the app keep the breadcrumbs?
+                <li>Does it remember inputted data?
+            </ul>
+        <li>User is editing some content and then navigates to a different page, clicks Refresh, or closes the tab
+            <ul>
+                <li>Does the app preserve their work, so they can resume editing it later?
+                <li>Does it warn the user about navigating away and let them cancel the operation?
+            </ul>
+        <li>User is editing some content and clicks Save, but the save operation fails
+            <ul>
+                <li>Does the app preserve their content and let them try the Save operation again?
+            </ul>
+        <li>User opens the web app in two browser windows
+            <ul>
+                <li>Can the user navigate in both windows separately?
+                <li>Does each window have its own breadcrumbs?
+                <li>What happens when the user changes some content and then tries to change the same content in another
+                    window?
+                <li>What happens when two users try to change the same content?
+                <li>What happens when a user changes some content but the save operation fails because their Internet
+                    connection is broken.
+                    Later, another user changes the content.
+                    Then later, the first user's Internet connection is restored.
+                    The app in the first user's browser tries the save operation again. What will happen?
+                    Will it overwrite the newer version of the content?
+            </ul>
+        <li>User middle-clicks on a link or button, intending to open a new tab
+            <ul>
+                <li>Does the app treat the middle click as a left-click,
+                    preventing the user from opening a new tab?
+                <li>Does the app treat the middle click as a left-click,
+                    navigating away from page?
+                <li>When a user needs to open a lot of pages, can they use middle-click to open several pages at once?
+            </ul>
+        <li>User clicks on a PDF or other kind of file that most browsers can display
+            <ul>
+                <li>Does the file display in the browser, or does the user have to save it to disk and then open it
+                    separately?
+                <li>Does the file open in a new tab?
+                <li>Can the user middle-click on the file to open it in a new tab?
+                <li>Can a user get a URL of a file from another user and view it?
+            </ul>
+        <li>When we deploy a new version of the app
+            <ul>
+                <li>Will the app destroy any information the user has entered but not saved?
+                <li>Will the app close all open screens and return the user to the homepage?
+            </ul>
+        <li>When the page content is taller than the browser window
+            <ul>
+                <li>Does a vertical scroll bar appear?
+                <li>Does the scroll bar have enough contrast for the user to see it and its handle?
+                <li>Can the user use the mouse to click and drag the scroll bar handle?
+                <li>Can the user use the mouse scroll wheel to scroll the page?
+                    Does the scrolling speed match the user's native OS scrolling behavior?
+                <li>Can the user drag their finger on the page to scroll it?
+            </ul>
+        <li>When the page content is wider than the browser window
+            <ul>
+                <li>Does content flow and wrap and remain visible without horizontal scrolling?
+                <li>Does the content extend offscreen and allow horizontal scrolling?
+                    If so, is there an *affordance* (a perceivable action possibility) for scrolling horizontally?
+                <li>Does the scroll bar have enough contrast for the user to see it and the handle?
+                <li>Can the user use the mouse to click and drag the scroll bar handle?
+                <li>Can the user drag their finger horizontally to scroll the content?
+            </ul>
+        <li>Accessibility, inclusive design
+            <ul>
+                <li>Can mobile users use the pinch/spread gesture to zoom the page?
+                <li>When a desktop user zooms the page, does *all* of the page content resize accordingly?
+                <li>When the user configures the browser with a specific font size,
+                    does the app display text with this font size?
+                <li>Are all modals scrollable,
+                    so buttons at the bottom are on-screen and clickable even when the font size is large
+                    or the browser is zoomed in?
+            </ul>
+        </li>
+    </ul>
+</section>
+<footer>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
