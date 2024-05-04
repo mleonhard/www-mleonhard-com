@@ -1,0 +1,88 @@
+# Tryer/Coaster Ratio
+
+Some employees try to do a good job and try to solve problems in the organization.
+We call them *engaged* employees.
+I will coin the term *tryer* to mean an engaged employee, someone who tries to do a good job.
+
+Other employees have given up, or never cared in the first place.
+They do their job but don't try to do it very well.
+They don't try to solve problems outside their direct job responsibilities.
+We call them *unengaged* employees. We say they are *coasting*.
+I will use the word *coaster* to mean an unengaged employee.
+
+I tend to be a tryer, although there have been times in my career when I coasted.
+
+When an organization has mostly tryers, they can get a lot done.
+As the tryers leave or lose motivation, the number of tryers goes down and the number of coasters goes up.
+When this happens, the organization becomes less efficient and accomplishes less.
+
+Therefore, the success of an organization depends upon the ratio of tryers to coasters, the T/C ratio.
+It also depends on the T/C of critical parts of the organization, like management, sales, and production.
+
+## Techniques for Increasing T/C
+
+- Careful hiring: Set up the hiring process to pass only tryers.
+  Examples: Jane Street, pre-IPO Google, Notion.
+  Careful hiring has some negative side effects:
+    - spending a lot of energy on hiring
+    - cannot hire people who would quickly become tryers once they join
+- PIP culture: Use frequent performance reviews and threats of firing to make everyone try or pretend to try.
+  Examples: Amazon, Snowflake, Netflix.
+  PIP culture has strong negative side effects:
+    - damaged employee health
+    - high turnover
+    - incentivizing immoral behavior like hiring to fire
+    - smaller hiring pool
+- Perf culture, performance-based pay:
+  Pay more to employees who demonstrate positive impact of their work.
+  Examples: post-IPO Google, Facebook.
+  Perf culture has strong negative side effects:
+    - Everyone is incentivized to game their team's metrics, so metrics become useless for business decisions.
+      Example: Facebook's degeneration from a fun and useful communication tool
+      into a machine that deftly manipulates users into consuming garbage content.
+    - Unglamorous work doesn't get done. For example, this is why Flutter is in version 3 and still has
+      [poor location support](https://github.com/flutter/flutter/issues/31453),
+      its iOS support is full of [problems](https://github.com/flutter/flutter/issues/80860),
+      and it [cannot cancel HTTP requests](https://github.com/dart-lang/http/issues/424).
+    - Engineers make systems unnecessarily sophisticated, adding tech debt.
+    - The organization spends a lot of energy launching and maintaining duplicate projects.
+      New systems are built to replace old systems, but the old systems are never turned down.
+
+## Ideas for Increasing T/C
+
+- Train employees to identify when they are at risk of becoming unengaged, changing from a tryer into a coaster.
+  Encourage them to seek assistance from manager, mentor, and senior teammates.
+- Train managers to identify when a teammate is at risk of becoming unengaged.
+- Train managers to consult with the teammate and offer support and options: changing priorities, moving to a different
+  project, starting a new project, escalation, etc.
+- Train executive team on T/C
+    - Use surveys to measure T/C across the organization
+    - Discuss T/C at organization-wide meetings
+    - Own T/C problems
+- Ad-hoc bonuses for trying to solve problems outside of one's direct responsibility, given out by managers to ICs
+  outside their subordinate tree.
+- Remove incentives for coasters to stay longer than they want to:
+    - When a manager identifies a coaster, convert all their outstanding equity grants to base salary increases and pay
+      bonuses early, prorated
+    - Eliminate vesting cliffs and bonuses for new or all employees.
+- Help coasters find jobs at other organizations
+    - Recruiting team to organize practice interviews and host office hours for resume reviews, LinkedIn profile
+      reviews, cover letter reviews, offer negotiation advice
+    - Referral club
+    - Education subsidy with stipend & insurance. Help the coaster go to grad school.
+- Sabbatical with stipend & insurance.
+  The cost of paying the stipend is much less than the opportunity cost to the organization of having a coaster in a
+  role instead of a tryer.
+  They may come back from sabbatical as a tryer.
+
+Bad ideas:
+
+- Make job level fluid
+    - A coasting L6 engineer may perform like a trying L5, and gets paid accordingly.
+    - Manager decides performance level per-quarter, with weekly check-ins.
+    - Engineer is paid at the level of their previous quarter's performance.
+    - No penalty for performing 2 levels down.
+    - Job title changes to the highest level of previous two quarters.
+    - This method has the same downsides as Perf Culture, and probably worse.
+
+Do you have other ideas? Please share them in comments.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Update - mleonhard's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<h1>HTML Update - mleonhard's Blog</h1>
+<p>2024-04-06</p>
+<section>
+    <h2>A Web App must Update the Page</h2>
+    It's 2023 and many companies publish complex apps that run through the web browser.
+    Browsers support two ways to update a page, each with serious problems:
+    <ul>
+        <li>HTML form post - The big problem with posting an HTML form is that the browser treats it as navigating to a
+            new page which has poor UX: it scrolls to the top, un-focuses widgets, and resets user-input widgets.
+        </li>
+        <li>JavaScript
+            <ul>
+                <li>apps must have expensive RPC code to move data between the frontend and backend</li>
+                <li>frontend and backend are deployed separately so the various versions talk to each other, creating a
+                    class of bugs
+                </li>
+                <li>the JavaScript language is poor (missing modules, static types, integers, threads, etc.)</li>
+                <li>app makers must use different languages for frontend and backend, or pay the significant cost of
+                    JavaScript on the backend
+                </li>
+                <li>the tools are poor</li>
+                <li>browser APIs are poor and inconsistent</li>
+                <li>enables mass surveillance and profiling</li>
+                <li>makes browsers insecure</li>
+                <li>makes web-apps insecure</li>
+            </ul>
+        </li>
+    </ul>
+
+    Outline:
+    - How web apps can update the page
+    - Problems with HTML form post and JavaScript
+    - Break down the problem: we need to let the user manipulate widgets, send their state to the server, and update the
+    page.
+    - Other ways: Turbo, htmx, Phoenix.
+    - New: HTML Update
+    - Introduce update.js
+    - Another way to make it fast: DocPatch.
+
+</section>
+<footer>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
