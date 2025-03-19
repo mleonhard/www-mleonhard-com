@@ -74,6 +74,12 @@ It also depends on the T/C of critical parts of the organization, like managemen
   The cost of paying the stipend is much less than the opportunity cost to the organization of having a coaster in a
   role instead of a tryer.
   They may come back from sabbatical as a tryer.
+- Make everyone an owner.  Examples: Jane Street.
+    - Grant every org member shares
+    - New hires get a slice of every existing member's shares
+    - Pay is dividends from vested and unvested shares
+    - When a person leaves the org, they keep their vested shares
+    - Only a current employee can vote their shares.
 
 Bad ideas:
 

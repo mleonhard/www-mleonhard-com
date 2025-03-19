@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MacOS Forces LLM Feature - mleonhard's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<section>
+    <h1>MacOS Forces LLM Feature - mleonhard's Blog</h1>
+    <p>2025-03-19</p>
+</section>
+<section>
+    <h2>What Happened</h2>
+    <ol>
+        <li>I got a new Apple laptop and turned off the <a href="https://en.wikipedia.org/wiki/Siri">Siri</a> and <a
+                href="https://en.wikipedia.org/wiki/Apple_Intelligence">Apple
+            Intelligence</a> features.
+        </li>
+        <li>I updated macOS and was forced to click a button.
+            <ol>
+                <li>I updated my new M4 MacBook Pro from macOS Sequoia 15.3.1 to 15.3.2.</li>
+                <li>After installing the update, the OS restarted and showed this dialog:
+                    <br/>
+                    <img src="macos-15.3.2-apple-intelligence-startup-dialog.jpg"
+                         alt="MacOS 15.3.2 startup showing Apple Intelligence BETA dialog">
+                </li>
+                <li>“Back” is disabled.</li>
+                <li>Pressing “ESC” does nothing.</li>
+                <li>To continue using my laptop, I must click “Continue”.</li>
+                <li>I clicked “Continue” and the dialog disappeared and my laptop finished starting.</li>
+            </ol>
+        </li>
+        <li>
+            Apple Intelligence was secretly turned on!
+            <ol>
+                <li>
+                    I opened Settings and clicked on “Apple Intelligence & Siri” and saw that the Apple Intelligence
+                    toggle is enabled:<br/>
+                    <img src="apple-intelligence-downloading.png"
+                         alt="MacOS Settings application showing Apple Intelligence toggle enabled">
+                </li>
+                <li>
+                    Turning off the toggle shows a confirmation screen:<br/>
+                    <img src="turning-off-apple-intelligence.png"
+                         alt="Confirmation screen for turning off Apple Intelligence">
+                </li>
+            </ol>
+        </li>
+    </ol>
+</section>
+<section>
+    <h2>Analysis</h2>
+    <ol>
+        <li>
+            Poor button label
+            <ol>
+                <li>Using a “Continue” button to enable a system feature is misleading. This breaks with Apple's own
+                    published guidelines:
+                    <blockquote>
+                        <p>Ensure that each button clearly communicates its purpose.</p>
+                        <p>A button always includes a text label or a symbol (or interface icon) — and sometimes a
+                            combination of both — to help people predict what it does.</p>
+                        <p>— <a
+                                href="https://developer.apple.com/design/human-interface-guidelines/buttons#Best-practices">Apple
+                            Human Interface Guidelines - Buttons - Best
+                            Practices</a> (Retrieved 2025-03-19)</p>
+                    </blockquote>
+                </li>
+                <li>To clearly communicate its purpose, the button can be labeled “Enable”.</li>
+                <li>Many users would not realize that clicking “Continue” enabled the feature.</li>
+                <li>Some users do not want the feature enabled. To align their computer with their preferences, they
+                    must disable the Apple Intelligence feature after clicking “Continue”.
+                </li>
+                <li>In UX design, an
+                    <em>error</em> is when a user operates the machine in a way that contradicts their desires. Much of
+                    the work of UX design is helping users avoid making errors.
+                </li>
+                <li>The macOS users in both categories (not realizing and not wanting), will fail to disable Apple
+                    Intelligence, an error.
+                </li>
+                <li>The poor button label leads Apple customers to make errors.</li>
+            </ol>
+        </li>
+        <li>
+            Missing “Skip” button
+            <ol>
+                <li>The system requires users to enable Apple Intelligence to continue using their computer.</li>
+                <li>
+                    Industry best-practice is to give users control over their software.
+                    <ol>
+                        <li>
+                            <blockquote>
+                                <p>User Control and Freedom</p>
+                                <p>Users often perform actions by mistake. They need a clearly marked “emergency exit”
+                                    to
+                                    leave the unwanted action without having to go through an extended process.</p>
+                                <p>When it's easy for people to back out of a process or undo an action, it fosters a
+                                    sense
+                                    of freedom and confidence. Exits allow users to remain in control of the system and
+                                    avoid getting stuck and feeling frustrated.</p>
+                                <p>— <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability
+                                    Heuristics for User Interface Design - Jakob Nielsen</a></p>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <blockquote>
+                                <p>User control is a vital part of user experience (UX) design—something that’s
+                                    primarily
+                                    due to its potential to enhance user autonomy in good designs.</p>
+                                <p>— <a
+                                        href="https://www.interaction-design.org/literature/topics/user-control#why_is_user_control_vital_in_ux_design">User
+                                    Control - Interaction Design Foundation</a></p>
+                            </blockquote>
+                        </li>
+                    </ol>
+                </li>
+                <li>By omitting the “Skip” option, Apple took control away from their users over the feature. They
+                    designed the software to force users to enable Apple Intelligence.
+                </li>
+            </ol>
+        </li>
+        <li>The design of the Apple Intelligence setup dialog indicates that Apple is deprioritizing user-centered
+            design. This is troubling to me as a long-term Apple customer.
+        </li>
+        <li>I urge Apple's board to demand that CEO Tim Cook and SVP Machine Learning and AI Strategy <a
+                href="https://www.linkedin.com/in/johngiannandrea/">John Giannandrea</a> return to the user-centered
+            design that made Apple great.
+        </li>
+        <li>Spicy version: Apple execs Tim Cook and John Giannandrea use dirty trick to drive adoption of “AI” feature,
+            burning long-term user trust for a short-term stock bump.
+        </li>
+    </ol>
+</section>
+<footer>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
