@@ -1,0 +1,11 @@
+---
+title: Software System Lifecycle
+---
+graph TD
+    PlanSystem(1. Plan) --> Scaffold
+    Scaffold(2. Make scaffold) --> ChangeFunction
+    ChangeFunction(3. Change a function) --> Migrate
+    ChangeFunction --> ChangeFunction
+    Migrate(4. Migrate users to a different system) --> TurnDown
+    TurnDown(5. Turn off)
+%% Convert to SVG: https://codepen.io/netsi1964/pen/MWMboow

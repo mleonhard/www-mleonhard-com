@@ -1,0 +1,21 @@
+---
+title: Changing a Software Function
+---
+graph TD
+    PlanFunction(Decide what it will do differently) --> ReadCode
+    subgraph DevCycle[Dev Cycle]
+        ReadCode(1. Read code & learn how it works)
+        ReadCode --> PlanCode
+        PlanCode(2. Plan change) --> ChangeCode
+        ChangeCode(3. Change code) --> TestCode
+        TestCode(4. Test updated code) --> ReadCode
+    end
+    TestCode --> CI
+    CI[5. Automated Testing] --> ReadCode
+    CI --> CodeReview
+    CodeReview(6. Code Review) --> Deploy
+    CodeReview --> ReadCode
+    Deploy(7. Deploy & Verify in Production) --> Done
+    Deploy --> Rollback
+    Rollback --> ReadCode
+%% Convert to SVG: https://codepen.io/netsi1964/pen/MWMboow

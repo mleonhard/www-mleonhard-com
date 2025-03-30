@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TITLE - mleonhard's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/style.css?1">
+</head>
+<body>
+<h1>Remote1 to Local1: Boosting Dev Productivity</h1>
+<p>2025-03-21</p>
+<section>
+    <h2>Summary</h2>
+    <ol>
+        <li>The pace of software development is limited by two things: 1) figuring out how the thing works and 2)
+            testing code changes.
+        </li>
+        <li>We can classify code testing by where the tests run: locally, in the cloud, in production, etc.</li>
+        <li>There are lots of ways to improve tests. The highest-ROI is in moving the tests closer to the engineer.</li>
+    </ol>
+</section>
+<section>
+    <h2>Detail</h2>
+    <ol>
+        <li>When people develop a software system, they usually use this process:
+            <img src="software-system-lifecycle.svg" style="width: 25rem;" alt="Software System Lifecycle Diagram">
+            <ol>
+                <li>Step "3. Change a function" includes adding, changing, fixing, and removing system functions.</li>
+                <li>Nearly all the effort spent on the system over its lifetime is spent in "3. Change a function".</li>
+                <li>Multiple developers perform this step concurrently.</li>
+                <li>When developers can do step 3 faster, the organization's engineering work gets done
+                    faster.
+                </li>
+                <li>Faster engineering means new products and features become available quicker. For a
+                    business, speeding up step 3 brings faster time-to-market, increased revenue, and better
+                    cost-efficiency.
+                </li>
+                <li>Faster engineering also reduces the time to repair the system when it has problems.</li>
+            </ol>
+        </li>
+        <li>Let's look more closely at this step:
+            <img src="dev-cycle.svg" style="width: 35rem;" alt="Dev Cycle Diagram">
+        </li>
+        <li>Ways to speed it up:
+            <ol>
+                <li>Make each step faster</li>
+                <li>Reduce the number of iterations</li>
+                <li>Discover problems earlier</li>
+            </ol>
+        </li>
+        <li>Make each step faster:
+            <ol class="decimal">
+                <li>Decide what it will do differently
+                    <ol>
+                        <li>Have a single person who decides this, a Directly Responsible Individual (DRI)</li>
+                        <li>Get stakeholders to review designs before changing code</li>
+                    </ol>
+                </li>
+                <li>Read code & learn how it works
+                    <ol>
+                        <li>Make code clarity the top priority</li>
+                        <li>A good ordered set of priorities: clarity, resilience, performance</li>
+                        <li>Use languages and libraries with good documentation</li>
+                        <li>Organize code into modules, grouped by business function, not type</li>
+                        <li>Use example tests. These are tests that use literals to specify input and expected output
+                            data. Literals are more clear than data made with helper functions.
+                        </li>
+                        <li>Ban code inheritance. Interface inheritance is fine.</li>
+                        <li>Ban runtime dependency injection frameworks (<a
+                                href="https://github.com/google/guice">Guice</a>, <a
+                                href="https://uber-go.github.io/fx/">Fx</a>) and instead have <code>main()</code>
+                            construct all the
+                            things.
+                        </li>
+                        <li>Use linter rules to restrict depth of indentation, number of function parameters, lines per
+                            function, lines per file, complexity of types, etc. To disable a rule, require the
+                            code author to add their name and an explanation of why breaking the rule is the best
+                            choice.
+                        </li>
+                        <li>Use a type-checked language</li>
+                        <li>Ban type-checking escape hatches (TypeScript's <code>any</code>, Rust's <code>unsafe</code>,
+                            etc.)
+                        </li>
+                        <li>Ban reflection</li>
+                        <li>Designate a Documentation Manager to make teams maintain minimal documentation.</li>
+                        <li>Invest in reducing technical debt</li>
+                        <li>Keep developer turnover low</li>
+                        <li>Quickly migrate off legacy systems and turn them off.</li>
+                        <li>Keep systems simple</li>
+                        <li>Use a monolith, not microservices.</li>
+                    </ol>
+                </li>
+                <li>Plan change
+                    <ol>
+                        <li>Foster a culture of writing clear and complete PR descriptions and titles.</li>
+                        <li>Link related PRs together so one can easily see all the work required for previous changes
+                        </li>
+                    </ol>
+                </li>
+                <li>Change code
+                    <ol>
+                        <li>Editor automatically and immediately checks syntax and types</li>
+                        <li>Editor automatically formats files</li>
+                        <li>Editor has refactoring functions</li>
+                        <li>Editor automatically runs linter and fixes most issues automatically as you type</li>
+                    </ol>
+                </li>
+                <li>Test updated code
+                    <ol>
+                        <li>Let developer run tests immediately</li>
+                        <li>Allow running specific tests and groups of tests</li>
+                        <li>Cache test results and automatically skip tests</li>
+                        <li>Automatically identify and disable flaky tests</li>
+                        <li>Invest in making tests run very fast</li>
+                        <li>Make tests print out stack traces and useful data on failure</li>
+                        <li>Support stepping through tests and code in a debugger</li>
+                        <li>Ban sleep in tests. Use fake clocks.</li>
+                    </ol>
+                </li>
+                <li>Automated testing
+                    <ol>
+                        <li>Run tests automatically</li>
+                        <li>Run tests in parallel</li>
+                        <li>Prioritize tests that are more likely to fail</li>
+                        <li>Notify developer when one fails or all succeed</li>
+                        <li>Measure and optimize time to notification</li>
+                        <li>Skip tests that cannot be affected by the change</li>
+                        <li>Automatically identify and disable flaky tests</li>
+                        <li>By default, automatically request review when tests pass</li>
+                    </ol>
+                </li>
+                <li>Code Review
+                    <ol>
+                        <li>Foster good review culture:
+                            <ol>
+                                <li>Prioritize reviews over other work</li>
+                                <li>Provide only actionable feedback</li>
+                                <li>Provide concrete suggested changes</li>
+                                <li>Reviewers make trivial fixes</li>
+                            </ol>
+                        </li>
+                        <li>Automatically assign reviews to available developers</li>
+                        <li>Use real-time notifications of review requests</li>
+                    </ol>
+                </li>
+                <li>Merge
+                    <ol>
+                        <li>Use a good merge queue</li>
+                        <li>Run a subset of checks</li>
+                        <li>Restrict jumping the queue</li>
+                        <li>Monitor and optimize merge queue performance</li>
+                    </ol>
+                </li>
+                <li>Deploy & Verify in Production
+                    <ol>
+                        <li>Release frequently or continuously</li>
+                        <li>Release automatically</li>
+                        <li>Perform release steps in parallel</li>
+                        <li>Monitor and optimize release performance</li>
+                        <li>Update PR descriptions with verification performed: shell sessions showing commands run and
+                            their output, links to dashboards and screenshots. This info is available for verifying
+                            future changes.
+                        </li>
+                    </ol>
+                </li>
+                <li>Rollback
+                    <ol>
+                        <li>For risky changes, use feature flags to rollback and don't revert. When we skip a revert, we
+                            also skip
+                            reverting the revert.
+                        </li>
+                        <li>Perform incident review for every rollback. Designate an incident review manager who makes
+                            them happen.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Step "1. Read code & learn how it works" takes effort depending on the developer's familiarity with
+            the system and the system's complexity, structure, tech debt, rate of change, and documentation.
+        </li>
+        <li>Step "4. Test updated code" is critical for developer productivity:
+            <ol>
+                <li>The developer performs it after every code change.</li>
+                <li>Changes to complex applications can require tens or hundreds of code changes, especially
+                    when
+                    adding tests.
+                </li>
+                <li>When this step is slow, the developer spends most of their time waiting on it. This can harm
+                    morale.
+                </li>
+                <li>For example, the author once worked on a Rails application that took 60s to load the
+                    application and begin executing test code. One day, the author built a complex integration
+                    test requiring about 120 code changes and spent an aggregate 2 hours that day just waiting
+                    for
+                    Ruby to load code.
+                </li>
+            </ol>
+        </li>
+    </ol>
+</section>
+<footer>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
