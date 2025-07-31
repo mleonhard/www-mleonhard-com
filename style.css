@@ -79,6 +79,22 @@ blockquote > *:last-child {
     margin-bottom: 0;
 }
 
+figure {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+figure > img, figure > video {
+    border: solid;
+    border-color: #444444;
+    border-radius: 0.3rem;
+}
+
+figcaption {
+    text-align: center;
+}
+
 nav ul {
     padding: 0;
 }
